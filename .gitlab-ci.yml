@@ -1,0 +1,27 @@
+image: nixpkgs/nix-flakes:latest
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - nix develop --command make ci-build
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 day
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mv build public
+    # add gitlab pages url subpath to beginning of url links
+    - sed -i "s/=\"\//=\"\/$CI_PROJECT_NAME\//g" public/index.html
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
