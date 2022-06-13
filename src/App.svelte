@@ -38,11 +38,13 @@
   const setLight = () => {
     mode = Mode.Light
     setColors(COLORS.light)
+    elevenBits = randElevenBits()
   }
 
   const setDark = () => {
     mode = Mode.Dark
     setColors(COLORS.dark)
+    elevenBits = randElevenBits()
   }
 
   const setRand = () => {
@@ -53,12 +55,15 @@
       text: rand(),
       btn: rand(),
     })
+    elevenBits = randElevenBits()
   }
 
-  const elevenBits = Array.from(
-    { length: 11 },
-    () => '10'[Math.floor(Math.random() * 2)]
-  ).join('')
+  const randElevenBits = () =>
+    Array.from({ length: 11 }, () => '10'[Math.floor(Math.random() * 2)]).join(
+      ''
+    )
+
+  let elevenBits = randElevenBits()
 
   const services = [
     'Product/Architecture/DevOps Consulation',
