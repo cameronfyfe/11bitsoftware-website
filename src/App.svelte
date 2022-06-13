@@ -55,6 +55,11 @@
     })
   }
 
+  const elevenBits = Array.from(
+    { length: 11 },
+    () => '10'[Math.floor(Math.random() * 2)]
+  ).join('')
+
   const services = [
     'Product/Architecture/DevOps Consulation',
     'Rapid Software Prototyping',
@@ -81,6 +86,8 @@
   </div>
 
   <h1>11 Bit Software</h1>
+
+  <p class="bit-hr">{elevenBits}</p>
 
   <h2>Services</h2>
 
@@ -172,6 +179,10 @@
     font-family: monospace;
     font-size: 1em;
     font-weight: 100;
+  }
+
+  p.bit-hr {
+    font-size: 1em;
   }
 
   p.email {
