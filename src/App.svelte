@@ -74,7 +74,7 @@
   ]
 
   const tech: { [s: string]: string[] } = {
-    Specialties: ['Rust', 'Nix'],
+    'Specialties': ['Rust', 'Nix'],
     'Desktop Software': ['Rust', 'Go', 'C++'],
     'Embedded Firmware': ['Rust', 'C', 'C++'],
     'Web Backend': ['Rust', 'Go', 'Node.js'],
