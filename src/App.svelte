@@ -74,10 +74,12 @@
   ]
 
   const tech: { [s: string]: string[] } = {
-    'Desktop Software': ['Rust', 'Go', 'C#'],
-    'Embedded Firmware': ['Rust', 'C/C++'],
-    'Web Backend': ['Rust', 'Go', 'C#', 'Node.js'],
+    'Specialties': ['Rust', 'Nix'],
+    'Desktop Software': ['Rust', 'Go', 'C++'],
+    'Embedded Firmware': ['Rust', 'C', 'C++'],
+    'Web Backend': ['Rust', 'Go', 'Node.js'],
     'Web Frontend': ['Svelte', 'React'],
+    'Decentralized Web': ['IPFS', 'CosmWasm', 'Solidity/EVM'],
   }
 </script>
 
