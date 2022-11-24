@@ -68,7 +68,7 @@
   let elevenBits = rand11()
 
   const services = [
-    'Product/Architecture/DevOps Consulation',
+    'Product/Architecture/DevOps Consultation',
     'Rapid Software Prototyping',
     'Custom Software Development',
   ]
