@@ -17,7 +17,7 @@
 
         devShell = pkgs.mkShell {
           nativeBuildInputs =
-            with pkgs; [ just nodejs-16_x ];
+            with pkgs; [ gnumake nodejs-16_x ];
         };
 
         packages = { dev = devShell; };
